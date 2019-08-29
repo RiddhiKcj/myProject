@@ -8,13 +8,13 @@ img{
   height: 120px;
 }
 }
- .user_nav,a{
+ .user_nav, a{
   text-align: left;
- 
+  color: white;
 }
 .top{
   float: right;
-   color: #007bff;
+   color: white;
 }
 .notice{
   text-align: left;
@@ -27,11 +27,7 @@ img{
 a:hover{
   color: #0c2846;
 }
-body {
-  background-color: none;
-  background-image: none;
-  
-}
+
 
 .card-signin {
   border: 0;
@@ -309,4 +305,19 @@ body {
   .form-label-group input:-ms-input-placeholder {
     color: #777;
   }
+}
+table, tr, td {
+  padding: 15px;
+}
+a{
+  color:white;
+}
+h3{
+  margin: auto;
+  text-align: center;
+  padding: 10px;
+}
+.field{
+  color: black;
+  font-weight: bold;
 }
