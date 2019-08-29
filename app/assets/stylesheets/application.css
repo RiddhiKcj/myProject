@@ -3,26 +3,31 @@ img{
   width:50px;
   height: 50px;
 }
+
 .d-block{
     width:120px;
   height: 120px;
 }
-}
- .user_nav, a{
+
+.user_nav, a{
   text-align: left;
   color: white;
 }
+
 .top{
   float: right;
    color: white;
 }
+
 .notice{
   text-align: left;
   color: #007bff;
 }
- .links a{
+
+.links a{
   color:#007bff;
  }
+
 
 a:hover{
   color: #0c2846;
@@ -155,18 +160,21 @@ a:hover{
     color: #777;
   }
 }
- .user_nav,a{
+
+.user_nav,a{
   text-align: left;
- 
 }
+
 .top{
   float: right;
    color: white;
 }
+
 .notice{
   text-align: left;
   color: white;
 }
+
  .links a{
   color:#007bff;
  }
@@ -174,6 +182,7 @@ a:hover{
 a:hover{
   color: #0c2846;
 }
+
 body {
   background: #007bff;
   background-image: linear-gradient(to right, #0062E6, #33AEFF);
@@ -306,17 +315,21 @@ body {
     color: #777;
   }
 }
+
 table, tr, td {
   padding: 15px;
 }
+
 a{
   color:white;
 }
+
 h3{
   margin: auto;
   text-align: center;
   padding: 10px;
 }
+
 .field{
   color: black;
   font-weight: bold;
