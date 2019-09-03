@@ -1,38 +1,36 @@
-
-img{
-  width:50px;
+img {
+  width: 50px;
   height: 50px;
 }
 
-.d-block{
-    width:120px;
+.d-block {
+  width: 120px;
   height: 120px;
 }
 
-.user_nav, a{
+.user_nav,
+a {
   text-align: left;
   color: white;
 }
 
-.top{
+.top {
   float: right;
-   color: white;
+  color: white;
 }
 
-.notice{
+.notice {
   text-align: left;
   color: #007bff;
 }
 
-.links a{
-  color:#007bff;
- }
-
-
-a:hover{
-  color: #0c2846;
+.links a {
+  color: #007bff;
 }
 
+a:hover {
+  color: #0c2846;
+}
 
 .card-signin {
   border: 0;
@@ -57,7 +55,7 @@ a:hover{
 .form-signin .btn {
   font-size: 80%;
   border-radius: 5rem;
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
   font-weight: bold;
   padding: 1rem;
   transition: all 0.2s;
@@ -74,12 +72,12 @@ a:hover{
   text-align: center;
 }
 
-.form-label-group>input,
-.form-label-group>label {
+.form-label-group > input,
+.form-label-group > label {
   padding: var(--input-padding-y) var(--input-padding-x);
 }
 
-.form-label-group>label {
+.form-label-group > label {
   position: absolute;
   top: 0;
   left: 0;
@@ -90,8 +88,8 @@ a:hover{
   line-height: 1.5;
   color: #495057;
   border: 1px solid transparent;
-  border-radius: .25rem;
-  transition: all .1s ease-in-out;
+  border-radius: 0.25rem;
+  transition: all 0.1s ease-in-out;
 }
 
 .form-label-group input::-webkit-input-placeholder {
@@ -119,7 +117,7 @@ a:hover{
   padding-bottom: calc(var(--input-padding-y) / 3);
 }
 
-.form-label-group input:not(:placeholder-shown)~label {
+.form-label-group input:not(:placeholder-shown) ~ label {
   padding-top: calc(var(--input-padding-y) / 3);
   padding-bottom: calc(var(--input-padding-y) / 3);
   font-size: 12px;
@@ -140,7 +138,7 @@ a:hover{
 -------------------------------------------------- */
 
 @supports (-ms-ime-align: auto) {
-  .form-label-group>label {
+  .form-label-group > label {
     display: none;
   }
   .form-label-group input::-ms-input-placeholder {
@@ -151,9 +149,8 @@ a:hover{
 /* Fallback for IE
 -------------------------------------------------- */
 
-@media all and (-ms-high-contrast: none),
-(-ms-high-contrast: active) {
-  .form-label-group>label {
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .form-label-group > label {
     display: none;
   }
   .form-label-group input:-ms-input-placeholder {
@@ -161,32 +158,32 @@ a:hover{
   }
 }
 
-.user_nav,a{
+.user_nav,
+a {
   text-align: left;
 }
 
-.top{
+.top {
   float: right;
-   color: white;
+  color: white;
 }
 
-.notice{
+.notice {
   text-align: left;
   color: white;
 }
 
- .links a{
-  color:#007bff;
- }
+.links a {
+  color: #007bff;
+}
 
-a:hover{
+a:hover {
   color: #0c2846;
 }
 
 body {
   background: #007bff;
-  background-image: linear-gradient(to right, #0062E6, #33AEFF);
-
+  background-image: linear-gradient(to right, #0062e6, #33aeff);
 }
 
 .card-signin {
@@ -212,7 +209,7 @@ body {
 .form-signin .btn {
   font-size: 80%;
   border-radius: 5rem;
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
   font-weight: bold;
   padding: 1rem;
   transition: all 0.2s;
@@ -229,12 +226,12 @@ body {
   text-align: center;
 }
 
-.form-label-group>input,
-.form-label-group>label {
+.form-label-group > input,
+.form-label-group > label {
   padding: var(--input-padding-y) var(--input-padding-x);
 }
 
-.form-label-group>label {
+.form-label-group > label {
   position: absolute;
   top: 0;
   left: 0;
@@ -245,8 +242,8 @@ body {
   line-height: 1.5;
   color: #495057;
   border: 1px solid transparent;
-  border-radius: .25rem;
-  transition: all .1s ease-in-out;
+  border-radius: 0.25rem;
+  transition: all 0.1s ease-in-out;
 }
 
 .form-label-group input::-webkit-input-placeholder {
@@ -274,7 +271,7 @@ body {
   padding-bottom: calc(var(--input-padding-y) / 3);
 }
 
-.form-label-group input:not(:placeholder-shown)~label {
+.form-label-group input:not(:placeholder-shown) ~ label {
   padding-top: calc(var(--input-padding-y) / 3);
   padding-bottom: calc(var(--input-padding-y) / 3);
   font-size: 12px;
@@ -295,7 +292,7 @@ body {
 -------------------------------------------------- */
 
 @supports (-ms-ime-align: auto) {
-  .form-label-group>label {
+  .form-label-group > label {
     display: none;
   }
   .form-label-group input::-ms-input-placeholder {
@@ -306,9 +303,8 @@ body {
 /* Fallback for IE
 -------------------------------------------------- */
 
-@media all and (-ms-high-contrast: none),
-(-ms-high-contrast: active) {
-  .form-label-group>label {
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .form-label-group > label {
     display: none;
   }
   .form-label-group input:-ms-input-placeholder {
@@ -316,21 +312,24 @@ body {
   }
 }
 
-table, tr, td {
+table,
+tr,
+td,
+th {
   padding: 15px;
 }
 
-a{
-  color:white;
+a {
+  color: white;
 }
 
-h3{
+h3 {
   margin: auto;
   text-align: center;
   padding: 10px;
 }
 
-.field{
+.field {
   color: black;
   font-weight: bold;
 }
