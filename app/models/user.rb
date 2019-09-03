@@ -8,8 +8,11 @@ class User < ApplicationRecord
   # Setup accessible attributes for model
   # attr_accessor :email, :password, :password_confirmation, :remember_me
   # attr_accessible :titlt, :body
-  validates_presence_of :username
-  validates_uniqueness_of :username
+  validates_presence_of :username 
+  validates_uniqueness_of :username, :email, :on => :create
+  validates_presence_of :email, :on => :create
+  validates_format_of :username, :with => /^[-(\w+\s?)*\s._@]+$/i, :multiline => true, :allow_blank => true, :message => "should only contain letter, numbers, or .-_@"
+
 
   def self.from_omniauth(auth)
   	where(provider: auth.provider, uid: auth.uid).first_or_create do | user |

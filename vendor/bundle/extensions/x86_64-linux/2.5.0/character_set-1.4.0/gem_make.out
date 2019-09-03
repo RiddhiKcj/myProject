@@ -1,0 +1,28 @@
+current directory: /home/riddhi/Desktop/git101/BlogApp1/blogApp/vendor/bundle/gems/character_set-1.4.0/ext/character_set
+/usr/bin/ruby2.5 -r ./siteconf20190903-10305-1w1aft1.rb extconf.rb
+creating Makefile
+
+current directory: /home/riddhi/Desktop/git101/BlogApp1/blogApp/vendor/bundle/gems/character_set-1.4.0/ext/character_set
+make "DESTDIR=" clean
+
+current directory: /home/riddhi/Desktop/git101/BlogApp1/blogApp/vendor/bundle/gems/character_set-1.4.0/ext/character_set
+make "DESTDIR="
+compiling character_set.c
+In file included from /usr/include/ruby-2.5.0/ruby.h:33:0,
+                 from character_set.c:1:
+character_set.c: In function ‘cs_alloc_len’:
+/usr/include/ruby-2.5.0/ruby/ruby.h:1172:61: warning: ISO C forbids braced-groups within expressions [-Wpedantic]
+ #define TypedData_Make_Struct(klass, type, data_type, sval) ({\
+                                                             ^
+character_set.c:93:8: note: in expansion of macro ‘TypedData_Make_Struct’
+   cs = TypedData_Make_Struct(klass, struct cs_data, &cs_type, data);
+        ^~~~~~~~~~~~~~~~~~~~~
+character_set.c: In function ‘cs_method_hash’:
+character_set.c:233:22: warning: ‘four_byte_value’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+       four_byte_value++;
+       ~~~~~~~~~~~~~~~^~
+linking shared-object character_set/character_set.so
+
+current directory: /home/riddhi/Desktop/git101/BlogApp1/blogApp/vendor/bundle/gems/character_set-1.4.0/ext/character_set
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 character_set.so ./.gem.20190903-10305-1mc49dt/character_set
