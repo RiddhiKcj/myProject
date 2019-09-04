@@ -94,4 +94,5 @@ Rails.application.configure do
   # config.active_record.dump_schema_after_migration = false
   # config.action_mailer.default_url_options = {:host => 'yourdomain.com'}
   # config.action_mailer.delivery_method = :smtp
+  Rails.application.routes.default_url_options[:host] = 'https://blognew-rk.herokuapp.com'
 end
