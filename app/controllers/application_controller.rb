@@ -2,12 +2,16 @@ class ApplicationController < ActionController::Base
 	add_flash_types :success, :warning, :danger, :info
 	before_action :configure_permitted_parameters, if: :devise_controller?
 	before_action :authenticate_user!
-	  
-	  protected
+	layout :layout_by_resource
 
-	  def configure_permitted_parameters
-	    devise_parameter_sanitizer.permit(:sign_up, keys: [:email])
-	  end
- 
+
+	protected
+	def layout_by_resource
+		user_signed_in? ? "application" : "index_layout"
+	end
+	def configure_permitted_parameters
+		devise_parameter_sanitizer.permit(:sign_up, keys: [:email])
+	end
+
 end
 
