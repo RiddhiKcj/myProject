@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BlogApp Login</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+      
+      <%= stylesheet_link_tag    'util', media: 'all', 'data-turbolinks-track': 'reload' %>
+      <%= stylesheet_link_tag    'main', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <div class="limiter">
+      <div class="container-login" style="background-image: none">
+        <div class="row wrap-login p-l-55 p-r-55 p-t-20 p-b-20">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+          <form class="login-form validate-form">
+            <span class="login-form-title p-b-40">
+              Login
+            </span>
+
+            <div
+
+              class="wrap-input validate-input m-b-23"
+              data-validate="Username is required">
+              <span class="label-input" style="font-family:Poppins;">Username</span>
+              <div class="row" ><br/>
+                <div class="col-sm-3" style="color:blue; display:inline"><span class="fa fa-user" style="display:inline;"></span></div>
+                <div class="col-sm-3" style="display:inline;""><input type="text" name="username" placeholder="Type your username"/></div>
+              </div>
+            </div>
+
+            <div
+            class="wrap-input validate-input m-b-23"
+            data-validate="Password is required">
+            <span class="label-input">Password</span>
+            <div class="row" ><br/>
+              <div class="col-sm-3" style="color:blue; display:inline;"><span class="fa fa-lock " style="display:inline;"></span></div>
+              <div class="col-sm-3" style="display:inline;"><input  type="password" name="pass" placeholder="Type your password"/></div>
+            </div>
+          </div>
+
+            <div class="text-right p-t-8 p-b-31">
+              <a href="#">
+                Forgot password?
+              </a>
+            </div>
+
+            <div class="container-login-form-btn">
+              <div class="wrap-login-form-btn">
+                <div class="login-form-bgbtn"></div>
+                <button class="login-form-btn">
+                  Login
+                </button>
+              </div>
+            </div>
+
+            <div class="txt1 text-center p-t-40 p-b-20">
+              <a href="#" class="txt2"><b> Sign Up </b></a><br /><br />
+              <span>
+                Or Sign Up Using
+              </span>
+            </div>
+
+            <div class="flex-c-m">
+              <a href="#" class="login-social-item bg1">
+                <i class="fa fa-facebook"></i>
+              </a>
+              <a href="#" class="login-social-item bg3">
+                <i class="fa fa-google-plus"></i>
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>                   
+    <%= javascript_include_tag 'main', 'data-turbolinks-track': 'reload' %>
+  </body>
+</html>
