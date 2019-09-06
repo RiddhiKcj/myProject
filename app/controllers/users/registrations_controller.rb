@@ -52,12 +52,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # The path used after sign up.
   def after_sign_up_path_for(resource)
-    user_session_path(resource), success: 'Account was successfully created. Please login to continue'
+    user_session_path(resource)
   end
 
   # The path used after sign up for inactive accounts.
   def after_inactive_sign_up_path_for(resource)
-    redirect_to '/users/sign_in', info: 'Please login to continue'
+    redirect_to '/users/sign_in'
   end
 
   def update_resource(resource, params)
