@@ -1,2 +1,23 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<div class="container content-page" style="margin-top:40px">
+  <div class="row">
+    <div class="col-sm-11">
+      <h3><strong><u>Articles</u></strong></h3>
+     
+	      <table>
+			<tbody> 
+              <% @users.each do |user| %>
+                <% if user.articles.any? %>
+                    <% user.articles.each do |article| %>
+                        <tr>
+                        <td><strong><%= article.title %></strong></td>
+                        <td><%= article.body %></td>
+                        <td>  ~ by  <%= user.username.humanize %></td>   
+                        </tr>
+                    <% end %>
+                <% end %>
+            <% end %>
+            </tbody>
+			</table>
+ 	</div>
+  </div>
+</div>

@@ -1,19 +1,17 @@
-<div class="container">
-<div class="col-sm-6">
-  <h2><strong>Forgot your password?</strong></h2>
+<span class="login-form-title p-b-40">
+<h2><strong>Forgot your password?</strong></h2>
+</span>
   <p> Just enter your registered email and hit the button below to get the passowrd reset instructions.</p>
   <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
 
-    <div class="field">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <div class="wrap-input p-t-20">
+      <%= f.label :email, class:"label-input" %> :
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder:"Type your email" %>
     </div>
-
-    <div class="actions">
-      <%= f.submit "Send me reset password instructions" %>
-    </div>
+    <div class="text-right p-t-8 p-b-10">
+      <%= f.submit "Send me reset password instructions", class:"txt2" %>
+      <%= link_to 'Back', '/', class:"txt2" %>
+    </div></div>
   <% end %><br/>
-  <%= link_to 'Back', '/' %>
-</div>
-</div>
+  

@@ -1,47 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Blog</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <%= csrf_meta_tags %>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'rails.validations' %>
-  </head>
-
-  <body>
-    
-
-    <div class="container">
-      <div class="user_nav">
-      <div class="notice">
-      <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p></div>
-      
-
-      <div class="top">
-        <% if user_signed_in? %>
-          Logged in as &nbsp;<% if current_user.username.blank? %>
-                                <strong><%= current_user.email %></strong>
-                             <% else %>
-                                <strong><%= current_user.username %></strong>
-                             <% end %>
-                              |
-          <%= link_to ' Edit Profile', edit_user_registration_path %> | 
-          <%= link_to ' Logout', destroy_user_session_path, method: :delete %>
-          <% end %>
-          </div> 
-
-      </div>
+</head>
+<body>
+ <div class="container box">
+ 	<div class="outer-grid-container">
+ 	  <nav class="navbar navbar-inverse">
+ 	  <div class="container-fluid">
+ 	  	<div class="navbar-header navbar-brand"><strong>Welcome <% if current_user.username.blank? %>
+       <strong><%= current_user.email %></strong>
+    <% else %>
+       <strong><%= current_user.username.humanize %></strong>
+    <% end %></strong></div>
+       <ul class="nav navbar-nav navbar-right">
+       <li><%= link_to welcome_index_path do %>
+        <i class="glyphicon glyphicon-home"></i> Home
+      <% end %></li>
+        <li><%= link_to edit_user_registration_path do %>
+          <i class="glyphicon glyphicon-user"></i> Edit Profile
+        <% end %></li>
+        <li><%= link_to destroy_user_session_path , method: :delete do %>
+          <i class="glyphicon glyphicon-log-out"></i> Logout
+        <% end %></li>
+	    </ul>
+ 	  </div>
+ 	  </nav> 
+    <div class="btn-group btn-group-justified">
+      <%= link_to 'Create Article', new_user_article_path(@user), class:"btn btn-primary" %> 
+      <%= link_to 'My Articles', user_articles_path(@user), class:"btn btn-primary" %> 
     </div>
-    
-    
-
-    <%= yield %>
-  </body>
+    <div class="header">  
+      <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, class: "alert alert-info alert-dismissible" %>
+      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+      <% end %>
+ 	  </div>
+     <div class="content-table"> 
+     <%= yield %>
+     </div>
+ 	  <footer>&copy; BlogApp-rk.com</footer>
+ 	</div>
+ </div>
+</body>
 </html>
+
