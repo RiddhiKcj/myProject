@@ -389,3 +389,6 @@ input[type="email"]:focus {
   float: none !important;
   font-size: large !important;
 }
+.error_explanation {
+  display: none;
+}
