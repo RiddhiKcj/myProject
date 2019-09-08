@@ -5,13 +5,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :validatable, :trackable,:omniauthable
 
-  # Setup accessible attributes for model
-  # attr_accessor :email, :password, :password_confirmation, :remember_me
-  # attr_accessible :titlt, :body
   validates_presence_of :username 
   validates_uniqueness_of :username, :email, :on => :create
-  validates_presence_of :email, :on => :create
-  validates_format_of :username, :with => /^[-(\w+\s?)*\s._@]+$/i, :multiline => true, :allow_blank => true, :message => "should only contain letter, numbers, or .-_@"
+  # validates_presence_of :email, :on => :create
+  # validates_format_of :username, :with => /^[-(\w+\s?)*\s._@]+$/i, :multiline => true, :allow_blank => true, :message => "should only contain letter, numbers, or .-_@"
 
 
   def self.from_omniauth(auth)

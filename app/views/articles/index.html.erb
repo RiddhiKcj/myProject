@@ -1,11 +1,8 @@
-
-<div class="container content-page" style="margin-top:40px">
-  <div class="row">
-    <div class="col-sm-11">
+<div class="container content-page">
       <h3><strong><u>Articles</u></strong></h3>
-      <% if @articles.any? %>
+	  <% if @articles.any? %>
+	    <div class="p-b-40">
 		  <table>
-			 <tbody>
 			  <% @articles.each do |article| %>
 			    <tr>
 			      <td><strong><%= article.title %></strong></td>
@@ -17,12 +14,10 @@
 			               data: { confirm: 'Are you sure?' } %>      
 			      </td>
 			    </tr>
-			  <% end %>
-			  </tbody>
+			  <% end %>	 
 			</table>
+		</div>
 		<% else %>
 		<p>No articles to show. Try creating one!</p>
 		<% end %>
- 	</div>
-  </div>
 </div>

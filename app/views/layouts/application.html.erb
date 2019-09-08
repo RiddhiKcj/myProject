@@ -13,6 +13,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'rails.validations' %>
+    <%= stylesheet_link_tag    'util', media: 'all', 'data-turbolinks-track': 'reload' %>
 </head>
 <body>
  <div class="container box">
@@ -43,8 +44,10 @@
     </div>
     <div class="header">  
       <% flash.each do |name, msg| %>
-      <%= content_tag :div, msg, class: "alert alert-info alert-dismissible" %>
-      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <%= content_tag :div, class: "alert alert-info alert-dismissible" do %>
+          <%= msg %>
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <% end %>
       <% end %>
  	  </div>
      <div class="content-table"> 
@@ -55,4 +58,3 @@
  </div>
 </body>
 </html>
-

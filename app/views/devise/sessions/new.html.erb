@@ -1,25 +1,29 @@
 <%= form_for(resource, as: resource_name, url: session_path(resource_name), :validate => true, :html => {:class => 'login-form '}) do |f| %>
-          
+  <%= render "devise/shared/error_messages", resource: resource %>
             <span class="login-form-title p-b-40">
               Login
             </span>
-
-            <div class="wrap-input validate-input m-b-15" data-validate="Username is required">
-              <%= f.label :username, class:"label-input"%>
-              <div class="row" ><br/>
-                <div class="col-sm-3" style="display:inline"><span class="fa fa-user" style="display:inline;"></span></div>
-                <div class="col-sm-3" style="display:inline;""><%= f.text_field :username, autofocus: true, autocomplete: "username",placeholder:"Type your username",class:"focus-input", validate: { presence: true } %></div>
+            
+            <div class="m-b-15">
+              <span class="focus-label"><%= f.label :username %></span>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-addon"><span class="fa fa-user"></span></span>
+                </div>
+                <%= f.text_field :username,  validate: { presence: true }, placeholder:"Type your username",class:"form-control" %>
               </div>
             </div>
 
-            <div class="wrap-input validate-input m-b-15" data-validate="Password is required">
-            <%= f.label :password, class:"label-input" %>    
-            <div class="row" ><br/>
-              <div class="col-sm-3" style="display:inline;"><span class="fa fa-lock " style="display:inline;"></span></div>
-              <div class="col-sm-3" style="display:inline;"><%= f.password_field :password, autocomplete: "current-password", placeholder:"Type your password",class:"focus-input" , validate: { presence: true } %>
+            <div class="m-b-15">
+              <span class="focus-label"><%= f.label :password %></span>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                </div>
+                <%= f.password_field :password, validate: { presence: true }, placeholder:"Type your password",class:"form-control"  %>
+              </div>
             </div>
-          </div>
-          </div>
+            
             <div class="text-right p-t-8 p-b-15">
             <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
               <%= link_to "Forgot password?", new_password_path(resource_name) %><br />
@@ -30,7 +34,7 @@
               <div class="wrap-login-form-btn">
                 <div class="login-form-bgbtn">
                 <%= f.submit value: "Login", class:"btn login-form-btn"  %>
-            
+                <%= f.validate %>
                 </div>
               </div>
             </div>
@@ -49,8 +53,8 @@
               </span>
             </div>
             <div class="flex-c-m">
-            <%= link_to '<i class="fa fa-facebook"></i>'.html_safe, omniauth_authorize_path(resource_name, :facebook), class:"login-social-item bg1" %>
-            <%= link_to '<i class="fa fa-google-plus"></i>'.html_safe, omniauth_authorize_path(resource_name, :google_oauth2), class:"login-social-item bg3" %>
+            <%= link_to '<i class="fa fa-facebook logo"></i>'.html_safe, omniauth_authorize_path(resource_name, :facebook), class:"login-social-item bg1" %>
+            <%= link_to '<i class="fa fa-google-plus logo"></i>'.html_safe, omniauth_authorize_path(resource_name, :google_oauth2), class:"login-social-item bg3" %>
             </div>
           <% end %>
 

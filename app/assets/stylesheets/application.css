@@ -304,12 +304,6 @@ tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
-tbody {
-  height: 400px;
-  display: block;
-  overflow-y: scroll; /* Trigger vertical scroll    */
-}
-
 h3 {
   margin: auto;
   text-align: center;
@@ -327,32 +321,29 @@ h3 {
 .outer-grid-container {
   font-family: Poppins;
   display: grid;
-  grid-template-rows: 90px auto auto auto 50px;
+  grid-template-rows: auto auto auto auto auto;
   /* grid-template-rows: 20% 6% 5% 64% 5%; */
   padding: 10px;
   margin: 0;
 }
 footer {
+  display: block;
   text-align: center;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: 7px;
   left: 10px;
-
+  height: 20px;
   background-color: #222;
   color: #fff;
 }
 .box {
-  position: fixed;
   padding: 0;
   margin: 0;
-
   top: 0;
   left: 0;
-
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.5);
 }
 .btn-group {
   padding: 0px;
@@ -368,9 +359,18 @@ html {
   overflow-y: scroll;
   overflow-x: hidden;
 }
-body {
-  position: absolute;
-}
+
 textarea {
   height: 200px !important;
+}
+.navbar {
+  margin-bottom: 0px;
+}
+.fa {
+  font-size: 20px;
+}
+.fa-user,
+.fa-lock {
+  padding-top: 10px;
+  padding-right: 10px;
 }
