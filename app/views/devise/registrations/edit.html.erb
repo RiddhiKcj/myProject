@@ -38,15 +38,15 @@
               <% end %>
 
               <div class="actions">
-              <br/><%= f.submit "Update" %><br/>
+              <br/><%= f.submit value:"Update", class:"btn btn-primary"  %><br/>
               </div>
             <% end %><br/>
             <div class="p-b-40">
             <h3><strong><u>Cancel my account</u></strong></h3>
 
-            <p><strong>Unhappy? </strong><%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+            <p><strong>Unhappy? </strong><%= button_to "Cancel my account", registration_path(resource_name), class:"btn btn-primary", data: { confirm: "Are you sure?" }, method: :delete %></p>
 
-            <%= link_to "Back", :back %></div>
+            <%= link_to "Back", :back, class:"btn btn-ouline-dark" %></div>
         </div>
       </div>
 </div>

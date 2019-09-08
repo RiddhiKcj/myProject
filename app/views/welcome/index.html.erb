@@ -1,7 +1,7 @@
 <div class="container content-page">
       <h3><strong><u>Articles</u></strong></h3>
       <div class="p-b-40">
-	      <table>
+	      <table class="table table-striped table-hover">
               <% @users.each do |user| %>
                 <% if user.articles.any? %>
                     <% user.articles.each do |article| %>

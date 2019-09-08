@@ -392,3 +392,9 @@ input[type="email"]:focus {
 #error_explanation {
   display: none;
 }
+.alert-dismissible {
+  padding-right: 3rem;
+}
+.alert {
+  font-size: smaller;
+}

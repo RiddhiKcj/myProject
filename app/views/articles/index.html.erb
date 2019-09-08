@@ -2,7 +2,7 @@
       <h3><strong><u>Articles</u></strong></h3>
 	  <% if @articles.any? %>
 	    <div class="p-b-40">
-		  <table>
+		  <table class="table table-striped table-hover">
 			  <% @articles.each do |article| %>
 			    <tr>
 			      <td><strong><%= article.title %></strong></td>
