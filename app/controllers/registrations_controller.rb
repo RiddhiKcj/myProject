@@ -53,13 +53,14 @@ class RegistrationsController < Devise::RegistrationsController
     #The path used after sign up.
     def after_sign_up_path_for(resource)
       sign_in(resource)
-      redirect_to after_sign_in_path(resource)
+      after_sign_in_path(resource)
     end
   
     # The path used after sign up for inactive accounts.
-    # def after_inactive_sign_up_path_for(resource)
-    #   super(resource)
-    # end
+    def after_inactive_sign_up_path_for(resource)
+      sign_in(resource)
+      after_sign_in_path(resource)
+    end
   
     def update_resource(resource, params)
       if current_user.provider == "facebook" || current_user.provider == "google_oauth2"
