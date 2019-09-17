@@ -10,9 +10,11 @@ gem 'omniauth-google-oauth2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 # Use sqlite3 as the database for Active Record
-
+gem 'rails_admin', '~> 2.0'
 gem 'jquery-rails'
 gem 'client_side_validations'
+gem 'webpacker'
+gem 'foreman'
 group :development, :test do
   gem 'sqlite3'
 end
