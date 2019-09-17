@@ -1,0 +1,25 @@
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css"
+/>
+<div class="v-container content-page">
+  <h3>
+    <strong><u>Articles</u></strong>
+  </h3>
+  <div class="p-b-40">
+    <table class="table table-striped table-hover">
+      <% @users.each do |user| %> <% if user.articles.any? %> <%
+      user.articles.each do |article| %>
+      <tr>
+        <td><strong><%= article.title %></strong></td>
+        <td><%= article.body %></td>
+        <td>~ by <%= user.username.humanize %></td>
+      </tr>
+      <% end %> <% end %> <% end %>
+    </table>
+  </div>
+</div>
