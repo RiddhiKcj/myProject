@@ -11,6 +11,7 @@ gem 'omniauth-google-oauth2'
 gem 'rails', '~> 5.2.3'
 # Use sqlite3 as the database for Active Record
 gem 'rails_admin', '~> 2.0'
+gem 'rest-client'
 gem 'jquery-rails'
 gem 'client_side_validations'
 gem 'webpacker'

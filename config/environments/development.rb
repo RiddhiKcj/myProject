@@ -69,4 +69,7 @@ Rails.application.configure do
     password:             'gudiyap512',
     authentication:       'plain',
     enable_starttls_auto: true }
+
+  # Make javascript_pack_tag load assets from webpack-dev-server.
+  config.x.webpacker[:dev_server_host] = 'http://localhost:8080'
 end
